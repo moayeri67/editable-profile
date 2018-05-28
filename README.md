@@ -7,6 +7,17 @@ In this project i'm using Spring boot on server side and Angular 4 on client sid
 # Server
 Spring boot REST API project using some useful features:
 
- .Spring Rest
- .Spring Security
- .Hibernate
+provides the following features:
+
+* Spring Rest
+* Spring Security
+* Spring Session
+* Hibernate
+
+# How to start Server
+Note that this seed project requires JDK 8.
+
+# Client
+This project was generated with Angular CLI version 6.0.0.
+
+provides the following features:
