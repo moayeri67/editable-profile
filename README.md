@@ -16,7 +16,7 @@ provides the following features:
 
 # How to start Server
 Note that this seed project requires JDK 8.
-I'm using mysql server for database, so before running the server side please import editable-profile-script.sql file on your server.
+I'm using mysql server for persisting data, so before running the server side please import editable-profile-script.sql file on your server.
 
 # Client
 This project was generated with Angular CLI version 6.0.0.
@@ -27,7 +27,6 @@ provides the following features:
 * angular-v6.0.0
 * angular/cli-v6.0.0
 * ng-bootstrap-v2.0.0
-* ngx-translate-v10.0.0
 
 # How to start Client
 Note that this seed project requires node >=v6.9.0 and npm >=3.
