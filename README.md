@@ -16,6 +16,7 @@ provides the following features:
 
 # How to start Server
 Note that this seed project requires JDK 8.
+I'm using mysql server for database, so before running the server side please import editable-profile-script.sql file on your server.
 
 # Client
 This project was generated with Angular CLI version 6.0.0.
