@@ -33,7 +33,7 @@ Note that this seed project requires node >=v6.9.0 and npm >=3.
 
 In order to start the project use:
 * git clone https://github.com/moayeri67/editable-profile.git
-* cd editable-profile
+* cd editable-profile/Client/
 * npm install
 * npm start
 * npm run build
