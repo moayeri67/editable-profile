@@ -21,3 +21,12 @@ Note that this seed project requires JDK 8.
 This project was generated with Angular CLI version 6.0.0.
 
 provides the following features:
+
+* Developed using boostrap-v4.0.0
+* angular-v6.0.0
+* angular/cli-v6.0.0
+* ng-bootstrap-v2.0.0
+* ngx-translate-v10.0.0
+
+# How to start Client
+Note that this seed project requires node >=v6.9.0 and npm >=3.
