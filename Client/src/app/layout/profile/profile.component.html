@@ -1,0 +1,158 @@
+<div [@routerTransition]>
+    <div class="col col-xl-6 col-lg-12">
+        <div class="row">
+            <div class="card col-lg-12">
+                <form [formGroup]="profileForm" novalidate>
+
+                    <div class="card-header">Profile</div>
+
+                    <br/>
+
+                    <div class="row">
+                        <div class="form-group col-md-12">
+                            <div class="col-md-10">
+                                <input mdInput type="text" id="displayName" class="form-control input-underline input-lg" name="displayName" placeholder="Display Name" formControlName="displayName">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="form-group col-md-12">
+                            <div class="col-md-7">
+                                <input mdInput type="text" id="realName" class="form-control input-underline input-lg" name="realName" placeholder="Real Name" formControlName="realName">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="form-group col-md-12">
+                            <div class="col-md-7">
+                                <label class="btn btn-default">
+                                    <input type="file" (change)="selectFile($event)">
+                                    <button class="btn btn-success" [disabled]="!selectedFiles" (click)="upload()">Upload</button>
+                                </label>
+
+                                <div *ngIf="currentFileUpload" class="progress">
+                                    <div class="progress-bar progress-bar-info progress-bar-striped"
+                                         role="progressbar" attr.aria.valuenow="{{progress.percentage}}"
+                                         aria-valuemin="0" aria-valuemax="100"
+                                         [ngStyle]="{width:progress.percentage+'%'}">
+                                        {{progress.percentage}}%
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="form-group col-md-12">
+                            <div class="col-md-10">
+                                <label class="col-md-2 control-lable">Date</label>
+                                <input class="col-md-5 input-underline" id="date" name="date" formControlName="birthday" placeholder="MM/DD/YYY" type="text">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="form-group col-md-12">
+                            <div class="col-md-7">
+                                <div>
+                                    <label class="col-md-4 control-lable">Gender</label>
+                                    <select id="gender" formControlName="gender">
+                                        <option *ngFor="let gender of genders" [value]="gender.id" [ngValue]="gender.id"> {{gender.name}}</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="form-group col-md-12">
+                            <div class="col-md-7">
+                                <div>
+                                    <label class="col-md-4 control-lable">Ethnicity</label>
+                                    <select id="ethnicity" formControlName="ethnicity">
+                                        <option *ngFor="let ethnicity of ethnicities" [value]="ethnicity.id" [ngValue]="ethnicity.id"> {{ethnicity.name}}</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="form-group col-md-12">
+                            <div class="col-md-7">
+                                <div>
+                                    <label class="col-md-4 control-lable">Religion</label>
+                                    <select id="religion" formControlName="religion">
+                                        <option *ngFor="let religion of religions" [value]="religion.id" [ngValue]="religion.id"> {{religion.name}}</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="form-group col-md-12">
+                            <div class="col-md-7">
+                                <div>
+                                    <label class="col-md-4 control-lable">Figure</label>
+                                    <select id="figure" formControlName="figure">
+                                        <option *ngFor="let figure of figures" [value]="figure.id" [ngValue]="figure.id"> {{figure.name}}</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="form-group col-md-12">
+                            <div class="col-md-7">
+                                <div>
+                                    <label class="col-md-4 control-lable">Marital Status</label>
+                                    <select id="maritalStatus" formControlName="maritalStatus">
+                                        <option *ngFor="let status of maritalStatus" [value]="status.id" [ngValue]="status.id"> {{status.name}}</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="form-group col-md-12">
+                            <div class="col-md-7">
+                                <input mdInput type="text" id="occupation" class="form-control input-underline input-lg" name="occupation" placeholder="Occupation" formControlName="occupation">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="form-group col-md-12">
+                            <div class="col-md-7">
+                                <input mdInput type="text" id="aboutMe" class="form-control input-underline input-lg" name="aboutMe" placeholder="About Me" formControlName="aboutMe">
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="row">
+                        <div class="form-group col-md-12">
+                            <div class="col-md-8">
+                                <div>
+                                    <label class="col-md-2 control-lable">Location</label>
+                                    <select id="location" formControlName="location">
+                                        <option *ngFor="let city of cities" [value]="city.id" [ngValue]="city.id"> {{city.city}}</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <button type="submit" class="btn btn-primary custom-width" (click)="submit(profileForm)" style="margin: 2%" formaction="#">Update Profile</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

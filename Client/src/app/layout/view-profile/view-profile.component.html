@@ -1,0 +1,95 @@
+<div [@routerTransition]>
+        <div class="col col-xl-6 col-lg-12">
+            <div class="row">
+                <div class="card col-lg-12">
+                    <form [formGroup]="profileForm" novalidate>
+
+                        <div class="card-header">View Profile</div>
+
+                        <br/>
+
+                        <div class="row">
+                            <div class="form-group col-md-12">
+                                <div class="col-lg-12 " align="center">
+                                    <img src="{{image}}" class="img-responsive img-rounded" width="150" height="100">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="form-group col-md-12">
+                                <div class="col-md-12">
+                                    <label class="col-md-4 control-lablel">Display Name : </label>
+                                    <input type="text" id="displayName" class=" col-md-5" name="displayName" value="{{displayName}}" readonly>
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="form-group col-md-12">
+                                <div class="col-md-7">
+                                    <label class="col-md-3 control-lable">Birthday : </label>
+                                    <input mdInput type="text" id="birthday" class="col-md-5" name="birthday" value="{{birthday}}" readonly>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="form-group col-md-12">
+                                <div class="col-md-7">
+                                    <label class="col-md-3 control-lable">Ethnicity : </label>
+                                    <input mdInput type="text" id="ethnicity" class="col-md-5" name="ethnicity" value="{{ethnicity}}" readonly>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="form-group col-md-12">
+                                <div class="col-md-7">
+                                    <label class="col-md-3 control-lable">Religion : </label>
+                                    <input mdInput type="text" id="religion" class="col-md-5" name="religion" value="{{religion}}" readonly>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="form-group col-md-12">
+                                <div class="col-md-7">
+                                    <label class="col-md-3 control-lable">Height : </label>
+                                    <input mdInput type="text" id="height" class="col-md-5" name="height" value="{{height}}" readonly>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="form-group col-md-12">
+                                <div class="col-md-7">
+                                    <label class="col-md-3 control-lable">Figure : </label>
+                                    <input mdInput type="text" id="figure" class="col-md-5" name="figure" value="{{figure}}" readonly>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="form-group col-md-12">
+                                <div class="col-md-7">
+                                    <label class="col-md-4 control-lable">About Me : </label>
+                                    <input mdInput type="text" id="aboutMe" class="col-md-5" name="aboutMe" value="{{aboutMe}}" readonly>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="form-group col-md-12">
+                                <div class="col-md-7">
+                                    <label class="col-md-3 control-lable">Location : </label>
+                                    <input mdInput type="text" id="location" class="col-md-5" name="location" value="{{location}}" readonly>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+</div>
