@@ -29,7 +29,7 @@ provides the following features:
 * ng-bootstrap-v2.0.0
 
 # How to start Client
-Note that this seed project requires node >=v6.9.0 and npm >=3.
+Note that this seed project requires node =v6.11.0.
 
 In order to start the project use:
 * git clone https://github.com/moayeri67/editable-profile.git
