@@ -16,7 +16,11 @@ provides the following features:
 
 # How to start Server
 Note that this seed project requires JDK 8.
-I'm using mysql server for persisting data, so before running the server side please import editable-profile-script.sql file on your server.
+I'm using mysql server for persisting data, so before running the server side please import editable-profile-script.sql file on your datanase and update below varaibles with your specific database configuration daata in application.properties file.
+
+spring.datasource.url=jdbc:mysql://database ip address/database name:
+spring.datasource.username=user name
+spring.datasource.password=password
 
 # Client
 This project was generated with Angular CLI version 6.0.0.
