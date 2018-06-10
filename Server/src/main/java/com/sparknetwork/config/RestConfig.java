@@ -1,12 +1,9 @@
 package com.sparknetwork.config;
 
-//import org.apache.ibatis.session.SqlSessionFactory;
-//import org.mybatis.spring.SqlSessionFactoryBean;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.core.io.ClassPathResource;
 import org.springframework.jdbc.datasource.DriverManagerDataSource;
-import org.springframework.stereotype.Repository;
 
 /**
  * Copyright (c) 2008-2015, Co. All rights reserved.
@@ -18,13 +15,22 @@ import org.springframework.stereotype.Repository;
 @Configuration
 public class RestConfig
 {
+    @Value("${spring.datasource.url}")
+    private String jdbcUrl;
+
+    @Value("${spring.datasource.username}")
+    private String userName;
+
+    @Value("${spring.datasource.password}")
+    private String password;
+
     @Bean(name = "datasource")
     public DriverManagerDataSource datasource(){
         DriverManagerDataSource driverManagerDataSource = new DriverManagerDataSource();
         driverManagerDataSource.setDriverClassName("com.mysql.jdbc.Driver");
-        driverManagerDataSource.setUrl("jdbc:mysql://localhost:3306/editableprofile");
-        driverManagerDataSource.setUsername("root");
-        driverManagerDataSource.setPassword("");
+        driverManagerDataSource.setUrl(jdbcUrl);
+        driverManagerDataSource.setUsername(userName);
+        driverManagerDataSource.setPassword(password);
         
         return driverManagerDataSource;
     }
