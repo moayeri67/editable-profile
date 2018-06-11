@@ -42,4 +42,3 @@ In order to start the project use:
 * cd editable-profile/Client/
 * npm install
 * npm start
-* npm run build
