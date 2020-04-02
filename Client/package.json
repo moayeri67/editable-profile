@@ -26,7 +26,7 @@
     "clone-deep": "^2.0.2",
     "core-js": "^2.4.1",
     "font-awesome": "^4.7.0",
-    "kind-of": "^6.0.2",
+    "kind-of": "^6.0.3",
     "lazy-cache": "^1.0.4",
     "lodash": "https://registry.npmjs.org/lodash/-/lodash-4.17.10.tgz",
     "pify": "^3.0.0",
